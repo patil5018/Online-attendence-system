@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Login</title>
+  </head>
+  <body>
+    <h1>Teacher Register</h1>
+
+    <form action="/teacher/register" method="post">
+      <input type="text" placeholder="email" name="email" />
+      <input type="text" placeholder="name" name="name" />
+      <input type="text" placeholder="branch" name="branch" />
+      <input type="text" placeholder="year" name="year" />
+      <input type="text" placeholder="password" name="password" />
+      <button type="submit">Register</button>
+    </form>
+    <span
+      >if already register then click on <a href="/teacher/login">Login</a>
+    </span>
+  </body>
+</html>

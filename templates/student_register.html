@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Register</title>
+    <style>
+      button {
+        margin-bottom: 60px;
+      }
+      span {
+        border: 2px solid green;
+        background-color: lightgreen;
+        color: green;
+        margin-top: 100px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Register</h1>
+
+    <div class="form" id="formOne">
+      <input type="text" placeholder="email" name="email" id="email" />
+      <input type="text" placeholder="name" name="name" id="name" />
+      <input type="text" placeholder="branch" name="branch" id="branch" />
+      <input type="text" placeholder="year" name="year" id="year" />
+      <input type="text" placeholder="password" name="password" id="password" />
+      <hr />
+      <video id="video"></video>
+      <hr />
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="/static/studentRegister.js"></script>
+  </body>
+</html>
+
+<!-- <form action="/teacher/register" method="post">
+    <input type="text" placeholder="email" name="email" />
+    <input type="text" placeholder="name" name="name" />
+    <input type="text" placeholder="branch" name="branch" />
+    <input type="text" placeholder="year" name="year" />
+    <input type="text" placeholder="password" name="password" />
+    <button type="submit">Register</button>
+  </form>
+  <span
+    >if already register then click on <a href="/teacher/login">Login</a>
+  </span> -->
