@@ -1,0 +1,3 @@
+git remote add origin https://github.com/patil5018/Online-attendence-system.git
+git branch -M main
+git push -u origin main

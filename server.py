@@ -13,7 +13,8 @@ import json
 # from flask_script import Manager
 # from flask_migrate import Migrate, MigrateCommand
 
-conn = "mysql://root:root@localhost/attendence_app"
+#conn = "mysql://root:root@localhost/attendence_app"
+conn = "mysql://sql6412404:hDBj5k2wWL@sql6.freemysqlhosting.net/sql6412404"
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = conn
