@@ -3,37 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Register</title>
-    <style>
-      button {
-        margin-bottom: 60px;
-      }
-      span {
-        border: 2px solid green;
-        background-color: lightgreen;
-        color: green;
-        margin-top: 100px;
-        padding: 10px;
-        border-radius: 10px;
-      }
-    </style>
+    
   </head>
-  <body>
-    <h1>Student Register</h1>
+  <body style="background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);">
 
+    //navbar
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="p-2 fs-5 navbar-brand mb-0 h1">Home</span>
+      </div>
+      <span class="mx-4 navbar-text">
+        <a class="btn btn-danger" href="/student/login">Login</a> </span>
+      </span>
+    </nav>
+
+
+
+    <h1 class="my-3 text-center">Student Register</h1>
+    <div class="container">
     <div class="form" id="formOne">
-      <input type="text" placeholder="email" name="email" id="email" />
-      <input type="text" placeholder="name" name="name" id="name" />
-      <input type="text" placeholder="branch" name="branch" id="branch" />
-      <input type="text" placeholder="year" name="year" id="year" />
-      <input type="text" placeholder="password" name="password" id="password" />
+      <div class="row g-3">
+      <label for="inputEmail4" class="fs-3 form-label">Email</label>
+      <input type="text" class="my-1" placeholder="email" name="email" id="email" />
+      <label for="inputEmail4" class="fs-3 my-1 form-label">Name</label>
+      <input type="text" class="my-1" placeholder="name" name="name" id="name" />
+      <label for="inputEmail4" class="fs-3 my-1 form-label">Branch</label>
+      <input type="text" class="my-1" placeholder="branch" name="branch" id="branch" />
+      <label for="inputEmail4" class="fs-3 my-1 form-label">Year</label>
+      <input type="text" class="my-1" placeholder="year" name="year" id="year" />
+      <label for="inputEmail4" class="fs-3 my-1 form-label">Password</label>
+      <input type="password" class="my-1" placeholder="password" name="password" id="password" />
+    </div>
       <hr />
+      <div class="text-center">
       <video id="video"></video>
+      </div>
       <hr />
     </div>
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="/static/studentRegister.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 </html>
 

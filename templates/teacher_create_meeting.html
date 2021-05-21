@@ -4,18 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Create Meeting</title>
+    <style>
+      #navHome{
+        text-decoration: none;
+      }
+    </style>
   </head>
-  <body>
-    <h1>Create Meeting</h1>
-    <a href="/teacher/logout">logout</a>
+  <body style="background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);;">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="p-2 fs-5 navbar-brand mb-0 h1"><a id="navHome" class="bg-transparent text-white" href="/">Home</a></span>
+        <h1 class="text-center">Join Meeting</h1>
+      </div>
+      
+      <span class="mx-4 navbar-text">
+        <a class="btn btn-danger" href="/teacher/logout">Logout</a> </span>
+      </span>
+    </nav>
+
+
+    <h1 class="my-3 text-center">Create Meeting</h1>
+    <!-- <a href="/teacher/logout">logout</a> -->
+    <div class="container">
     <form action="/teacher/create_meeting" method="post">
-      <input type="text" placeholder="meeting link" name="meeting_link" />
-      <button type="submit">Create Meeting</button>
+      <div class="input-group mb-3">
+      <input class="form-control" type="text" placeholder="meeting link" name="meeting_link" />
+      <span class="input-group-text" id="basic-addon2">@example.com</span>
+      <button class="input-group-text" type="submit">Create Meeting</button>
+    </div>
     </form>
+  
     <hr />
-    <p>{{ meet_id }}</p>
+    <p class="text-center">{{ meet_id }}</p>
     <hr />
-    <p><a href="/teacher/attendence_report">Attendence Report</a></p>
+    <p><a class="btn btn-info" href="/teacher/attendence_report">Attendence Report</a></p>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 </html>
