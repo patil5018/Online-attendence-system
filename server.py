@@ -81,9 +81,8 @@ if any(files_list):
 
 print('Initialized')
 
-
-@app.route('/')
 #@cross_origin()
+@app.route('/')
 def hello_world():
     return render_template("home.html")
 
