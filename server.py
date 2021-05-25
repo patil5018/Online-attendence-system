@@ -83,7 +83,7 @@ print('Initialized')
 
 
 @app.route('/')
-@cross_origin()
+#@cross_origin()
 def hello_world():
     return render_template("home.html")
 
