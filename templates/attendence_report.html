@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -175,3 +176,182 @@
   });
   </script>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendence Report</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: linear-gradient(45deg, #49a09d, #5f2c82);
+        font-family: sans-serif;
+        font-weight: 100;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      table {
+        width: 800px;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+      th {
+        text-align: left;
+      }
+      thead th {
+        background-color: #55608f;
+      }
+      tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      tbody td {
+        position: relative;
+      }
+      tbody td:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+      th,
+      td {
+        border: 2px solid white;
+      }
+      table {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: 2px solid white;
+      }
+      span {
+        font-weight: bold;
+      }
+      h1,
+      h3 {
+        color: white;
+        text-align: center;
+      }
+      form {
+        background-color: rgba(223, 223, 223, 0.377);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      select,
+      button {
+        margin: 10px;
+      }
+      select {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attendence Report</h1>
+    <h3>please select meeting to generate attendence report</h3>
+    <form action="/teacher/attendence_report" method="post">
+      <select name="meetingid" id="meetingid">
+        {% for data in meetdata %}
+        <option value="{{ data.id }}">
+          <b>Id: </b> {{ data.id }} | <span>Link: </span> {{ data.meeting_link
+          }}
+        </option>
+        {% endfor %}
+      </select>
+      <button type="submit">Generate</button>
+    </form>
+    <button id="btn">Download</button>
+
+    {% if attendenddata %}
+    <div class="container">
+      <table>
+        <tr>
+          <th>Student Id</th>
+          <th>Student Name</th>
+          <th>Meeting Id</th>
+          <th>Attended Time(Minutes)</th>
+        </tr>
+        {% for data in attendenddata %}
+        <tr>
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.meeting_id }}</td>
+          <td>{{ data.attendence_time }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    {% endif %}
+  </body>
+  <script>
+    function download_csv(csv, filename) {
+      var csvFile;
+      var downloadLink;
+  
+      // CSV FILE
+      csvFile = new Blob([csv], {type: "text/csv"});
+  
+      // Download link
+      downloadLink = document.createElement("a");
+  
+      // File name
+      downloadLink.download = filename;
+  
+      // We have to create a link to the file
+      downloadLink.href = window.URL.createObjectURL(csvFile);
+  
+      // Make sure that the link is not displayed
+      downloadLink.style.display = "none";
+  
+      // Add the link to your DOM
+      document.body.appendChild(downloadLink);
+  
+      // Lanzamos
+      downloadLink.click();
+  }
+  
+  function export_table_to_csv(html, filename) {
+  var csv = [];
+  var rows = document.querySelectorAll("table tr");
+  
+      for (var i = 0; i < rows.length; i++) {
+  var row = [], cols = rows[i].querySelectorAll("td, th");
+  
+          for (var j = 0; j < cols.length; j++)
+              row.push(cols[j].innerText);
+         
+  csv.push(row.join(","));
+  }
+  
+      // Download CSV
+      download_csv(csv.join("\n"), filename);
+  }
+  
+  document.getElementById("btn").addEventListener("click", function () {
+      var html = document.querySelector("table").outerHTML;
+  export_table_to_csv(html, "table.csv");
+  });
+  </script>
+</html>
+>>>>>>> 8c32460a46a667885f42f1a545a039e84d713229
