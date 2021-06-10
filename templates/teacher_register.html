@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,102 +7,219 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Teacher Login</title>
     <style>
-      input[type=text]{
-        background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        
-        border: 2px solid black;
-        border-radius: 8px;
+      body {
+        background-image: radial-gradient(
+          circle 621px at 25.3% 13.8%,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(234, 236, 255, 1) 90%
+        );
+      }
+
+      a {
+        margin-right: 30px;
+        font-size: large;
+      }
+
+      nav,
+      footer {
+        background-color: #1b262c;
+      }
+
+      .nav-link a {
+        color: floralwhite;
+      }
+
+      .navbar-nav {
+        margin-right: auto;
+        margin-left: 70%;
+      }
+
+      .dropdown-item,
+      .dropdown-menu {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(15, 15, 15, 0.4)
+        );
+        color: floralwhite;
+      }
+
+      .formLabel {
+        color: #1b262c;
+      }
+
+      #login .container #login-row #login-column #login-box {
+        margin-top: 100px;
+        max-width: 600px;
+        height: 520px;
+        border: 1px solid #9c9c9c;
+        background-color: #eaeaea;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      #login .container #login-row #login-column #login-box #login-form {
+        padding: 20px;
+      }
+      #login
+        .container
+        #login-row
+        #login-column
+        #login-box
+        .login-form
+        #register-link {
+        margin-top: -85px;
+      }
+
+      #login {
+        height: 100vh;
+      }
 
 
+      footer {
+        margin-top: 5%;
+        padding: 15px 0 15px 0;
+        color: #eeeeee;
+        text-align: center;
+        font-family: "Indie Flower", cursive;
       }
-     
-      input[type=password]{
-        background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        
-        border: 2px solid black;
-        border-radius: 8px;
-      }
-      
     </style>
   </head>
-  <body style="background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);">
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-      <div class="container-fluid">
-        <span class="p-2 fs-5 navbar-brand mb-0 h1">Home</span>
-      </div>
-      <span class="mx-4 navbar-text">
-        <a class="btn btn-danger" href="/teacher/login">Back</a> </span>
-      </span>
-    </nav>
-    <h1 class="my-3 text-center">Teacher Register</h1>
-    <div class="container">
-    <form class="row g-3" action="/teacher/register" method="post">
-      <label for="inputEmail4" class="fs-3 form-label">Email</label>
-      <input class="my-1" type="text" placeholder="email" name="email" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Name</label>
-      <input type="text" class="my-1" placeholder="name" name="name" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Branch</label>
-      <input type="text" class="my-1" placeholder="branch" name="branch" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Year</label>
-      <input type="text" class="my-1" placeholder="year" name="year" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Password</label>
-      <input type="password" class="my-1" placeholder="password" name="password" />
-      <button class="btn btn-dark" type="submit">Register</button>
-    </form>
-    <div class="my-4 fs-3">If already register then click on <a class="btn btn-dark" href="/teacher/login">Login</a>
-    </div>
-  </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  </body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Teacher Login</title>
-  </head>
   <body>
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <span class="p-2 fs-5 navbar-brand mb-0 h1">Home</span>
+        <a class="navbar-brand" href="#" style="font-size: x-large;">OFRAS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Aboutus">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select a role
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/student/login">Student</a></li>
+                <li><a class="dropdown-item" href="/teacher/login">Teacher</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-      <span class="mx-4 navbar-text">
-        <a class="btn btn-danger" href="/teacher/login">Back</a> </span>
-      </span>
     </nav>
-    <h1 class="my-3 text-center">Teacher Register</h1>
-    <div class="container">
-    <form class="row g-3" action="/teacher/register" method="post">
-      <label for="inputEmail4" class="fs-3 form-label">Email</label>
-      <input class="my-1" type="text" placeholder="email" name="email" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Name</label>
-      <input type="text" class="my-1" placeholder="name" name="name" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Branch</label>
-      <input type="text" class="my-1" placeholder="branch" name="branch" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Year</label>
-      <input type="text" class="my-1" placeholder="year" name="year" />
-      <label for="inputEmail4" class="fs-3 my-1 form-label">Password</label>
-      <input type="text" class="my-1" placeholder="password" name="password" />
-      <button class="btn btn-secondary" type="submit">Register</button>
-    </form>
-    <div class="my-4 fs-3">If already register then click on <a class="btn btn-primary" href="/teacher/login">Login</a>
+
+
+    <div id="login">
+      <div class="container">
+        <div
+          id="login-row"
+          class="row justify-content-center align-items-center"
+        >
+          <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+              <form  class="form login-form" action="/teacher/register" method="post">
+                <h3 class="text-center formLabel">Teacher Register</h3>
+                <div class="form-group">
+                  <label for="inputEmail4" class="formLabel">Email:</label
+                  ><br />
+                  <input
+                    type="text" 
+                    placeholder="email" 
+                    name="email"
+                    id="email"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputEmail4" class="formLabel">Name:</label
+                  ><br />
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="name" 
+                    name="name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputEmail4" class="formLabel">Branch:</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="branch"
+                    id="branch"
+                    class="form-control"
+                    placeholder="branch"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputEmail4" class="formLabel">Year:</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="year"
+                    id="year"
+                    class="form-control"
+                    placeholder="year"
+                  />
+                </div>
+
+
+
+                <div class="form-group">
+                  <label for="inputEmail4" class="formLabel">Password:</label
+                  ><br />
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="form-control"
+                    placeholder="password"
+                  />
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-secondary" type="submit" style="margin: 4px; margin-top: 15px;">Register</button>
+                  <p style="margin: 5px; font-weight: 700;">If already Registered, then click on Login <a class="btn btn-secondary" href="/teacher/login" style="margin: 4px;" >Login</a> </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+
+    <footer class="footer fixed-bottom">
+      <div class="container">
+        <p
+          class="center"
+          style="padding: 0px; margin: 0px; color: rgba(255, 250, 240, 0.4)"
+        >
+          &copy; onlineFaceRecognitionAttendanceSystem.com
+        </p>
+        <p
+          class="center"
+          style="
+            margin: 0px;
+            padding: 0px;
+            font-size: smaller;
+            color: rgba(255, 250, 240, 0.6);
+          "
+        >
+          Developed by - Group No. 31
+        </p>
+      </div>
+    </footer>
+
+
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 </html>
->>>>>>> 8c32460a46a667885f42f1a545a039e84d713229
