@@ -1,10 +1,10 @@
 
-const btn = document.createElement("button");
+const btn = document.getElementById("sub");
 btn.innerText = "submit"
 btn.addEventListener("click", onSubmt)
 
 
-document.getElementById("formOne").appendChild(btn)
+//document.getElementById("formOne").appendChild(btn)
 
 function onSubmt() {
 
