@@ -1,74 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
     <title>Home</title>
+
     <style>
-        #GFG {
-            text-decoration: none;
-            color: black;
-        }
+      body {
+        background-image: radial-gradient( circle 621px at 25.3% 13.8%,  rgba(255,255,255,1) 0%, rgba(234,236,255,1) 90% );
+      }
+    
+      a {
+        margin-right: 30px;
+        font-size: large;
+      }
+
+      nav, footer {
+       background-color: #1b262c;
+      }
+
+      .nav-link a {
+        color: floralwhite;
+      }
+
+      .navbar-nav {
+        margin-right: auto;
+        margin-left: 70%;
+      }
+
+      .dropdown-item, .dropdown-menu {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(15, 15, 15, 0.4));
+        color: floralwhite;
+      }
+
+      .jumbo {
+        background-image: linear-gradient(109.6deg,rgba(95, 158, 160,1) 11.2%,rgba(59, 188, 192, 0.8)91.1%);
+        opacity: 0.8;
+        color: floralwhite;
+        font-weight: 800;
+        border: 1px solid cadetblue;
+        padding: 10px;
+        box-shadow: 5px 10px 18px #888888;
+        margin: 0%;
+      }
+
+      footer {
+          margin-top: 5%;
+          padding: 15px 0 15px 0;
+          color: #EEEEEE;
+          text-align: center;
+          font-family: 'Indie Flower', cursive;
+            }
+      .carousel-item img {
+        display: block;
+        width: 250px;
+        height: 380px
+      }        
+
+      .myCarousel {
+        width: 50%;
+        margin: auto; 
+        border-radius: 7px; 
+        box-shadow: 5px 10px 18px #888888;
+      }
     </style>
   </head>
-  <body style="background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);">
-    <!-- As a heading -->
-<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-  <div class="container-fluid">
-    <span class="p-2 fs-3 navbar-brand mb-0 h1">Home</span>
-  </div>
-</nav>
+  <body>
 
-
-    <!-- project heading-->
-
-      <div class="p-3 container">
-        <h1 class="p-3 text-center text-capitalize">Welcome to Online face attendence system</h1>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="font-size: x-large;">OFRAS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Aboutus">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select a role
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/student/login">Student</a></li>
+                <li><a class="dropdown-item" href="/teacher/login">Teacher</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
 
-
-
-
-
-
-
-    <div class="container">
-    
-
-    
-    <!-- As a link -->
-
-
-
-
-    <!--  roles -->
-
-    <ul class="list-group d-grid gap-3">
-  <li class="p-3 list-group bg-light text-dark text-uppercase fw-bold fw-bolder fs-1 " style="background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);"><h3>Select your role</h3></li>
-
-  <li class="p-3 list-group bg-info text-dark fs-3" style="background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);"><a id="GFG" href="/student/login">Student</a></li>
-  <li class="p-3 list-group bg-warning text-dark fs-3" style="background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);"><a id="GFG" href="/teacher/login">Teacher</a></li>
-
-</ul>
-
-
-
-
-
-
-
-
-
-    
-    
-    
+    <div class="jumbo p-5 rounded-lg">
+      <h1 class="display-4">Welcome!</h1>
+      <p class="lead" style="font-weight: 400;">To the one stop solution to marking attendance!</p>
+      <hr class="my-4 bg-light">
+      <p style="font-size:24px ;font-style:italic ">Select a role below to start your journey with us.</p>
+      <a class="btn btn-outline-dark btn-lg" href="/student/login" role="button">Student</a>
+      <a class="btn btn-outline-dark btn-lg" href="/teacher/login" role="button">Teacher</a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
+
+      <div class="container-fluid" style="padding-right: 0px; padding-left: 0px; margin: 15px 0px 10px 0px;">
+        <h3 style="padding: 6px; color: floralwhite;background-color: #1b262c; margin:0px;">
+        Our Salient Features :
+        </h3>
+      </div>
+    <div id="carouselExampleIndicators" class="carousel slide myCarousel" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color:#1b262c;"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-color:#1b262c;"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-color:#1b262c;"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/S1.jpg" class="d-block w-100" alt="slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="assets\S1.jpg" class="d-block w-100" alt="slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/S3.jpg" class="d-block w-100 carImage" alt="slide 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: darkslategrey;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: darkslategrey;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--</div> -->
+
+
+
+
+
+
+
+    <footer class="footer fixed-bottom">
+      <div class="container">
+         <p class="center" style="padding: 0px; margin: 0px;color: rgba(255, 250, 240,0.4);"> &copy; onlineFaceRecognitionAttendanceSystem.com </p>
+         <p class="center" style="margin: 0px; padding: 0px;font-size: smaller;color: rgba(255, 250, 240,0.6);"> Developed by - Group No. 31</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
