@@ -1,5 +1,5 @@
 
-const btn = document.createElement("button");
+const btn = document.getElementById("sub1");
 btn.innerText = "Start Attending"
 btn.addEventListener("click", registerMeeting)
 
@@ -58,7 +58,7 @@ function verifyAttendence(meetingId, image) {
 }
 
 
-document.getElementById("formOne").appendChild(btn)
+//document.getElementById("formOne").appendChild(btn)
 
 function onSubmt() {
 
