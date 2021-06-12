@@ -20,6 +20,8 @@ conn = "mysql://freedbtech_rootp:rootp@freedb.tech/freedbtech_attendenceapp"
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = conn
 db = SQLAlchemy(app)
+picFolder=os.path.join('static','assets')
+app.config['UPLOAD_FOLDER']=picFolder
 
 # defining models for sql
 
@@ -57,7 +59,7 @@ class attendence(db.Model):
     attendance_time = db.Column(db.Integer)
 
 
-db.create_all()
+#db.create_all()
 
 # Initializing image recognition model
 files_list = os.listdir("./trainingdata")
@@ -84,7 +86,10 @@ print('Initialized')
 #@cross_origin()
 @app.route('/')
 def hello_world():
-    return render_template("home.html")
+    pic1=os.path.join(app.config['UPLOAD_FOLDER'],'S1.jpg')
+    pic2=os.path.join(app.config['UPLOAD_FOLDER'],'S2.jpg')
+    pic3=os.path.join(app.config['UPLOAD_FOLDER'],'S3.jpg')
+    return render_template("home.html", s1=pic1, s2=pic2, s3=pic3)
 
 
 # ______________TEACHER ROUTES
@@ -263,6 +268,10 @@ def student_meeting_join():
 def student_logout():
     session.pop('sid', None)
     return redirect(url_for('student_login'))
+
+@app.route('/Aboutus')
+def about1():
+    return render_template("Aboutus.html")
 
 
 @app.route('/api/student/register_to_meeting', methods=["POST"])

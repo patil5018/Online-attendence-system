@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>About Us</title>
+
+    <style>
+      body {
+          display: block;
+        background-image: radial-gradient( circle 621px at 25.3% 13.8%,  rgba(255,255,255,1) 0%, rgba(234,236,255,1) 90% );
+        height: 100vh;
+      }
+    
+      a {
+        margin-right: 30px;
+        font-size: large;
+      }
+
+      nav, footer {
+       background-color: #1b262c;
+      }
+
+      .nav-link a {
+        color: floralwhite;
+      }
+
+      .navbar-nav {
+        margin-right: auto;
+        margin-left: 70%;
+      }
+
+      .dropdown-item, .dropdown-menu {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(15, 15, 15, 0.4));
+        color: floralwhite;
+      }
+
+      .jumbo {
+        background-image: linear-gradient( 110.5deg,  rgba(71,114,148,1) 14.9%, rgba(149,245,211,1) 77.9% );
+        opacity: 0.8;
+        color: floralwhite;
+        font-weight: 800;
+        border: 1px solid cadetblue;
+        padding: 10px;
+        box-shadow: 5px 10px 18px #888888;
+        margin: 0%;
+      }
+
+      .aboutContainer {
+          background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+          border: 3px solid #969595;
+          border-bottom: 2px solid #b6b6b6;
+          border-radius: 4px;
+          box-shadow: 5px 10px 18px #888888;
+          margin: auto;
+          margin-top: 25px;
+          margin-bottom: 25px;
+          color: #1b262c;
+          max-width:90%;
+      }
+
+      .aboutTitle {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: #a3b9e2;
+          font-weight: 700;
+          text-shadow: 4px 4px 16px #151d22;
+          font-size: 30px;
+          text-align: center;
+      }
+
+      .aboutData {
+          color: #1b262c;
+          font-weight: 500;
+          font-size: 20px;
+      }
+
+      .services {
+        margin: 40px; 
+        font-weight: 500; 
+        font-size: 30px;
+      }
+
+      footer {
+          margin-top: 5%;
+          padding: 15px 0 15px 0;
+          color: #EEEEEE;
+          text-align: center;
+          font-family: 'Indie Flower', cursive;
+            }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="font-size: x-large;">OFRAS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/Aboutus">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select a role
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/student/login">Student</a></li>
+                <li><a class="dropdown-item" href="/teacher/login">Teacher</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbo p-5 rounded-lg">
+      <h1 class="display-4">About Us</h1>
+      <hr class="my-4 bg-light">
+      <p class="lead" style="font-weight: 400; color: #1b262c;"><span style="font-size:24px ;font-style:italic ">Online Face Recognition Attendance System (OFRAS) </span> is a CSE Final Year Project made by <span style="font-size:24px ;font-style:italic ">Group No. 31</span> of GES R H Sapat College of Engineering.  </p>
+    </div>
+
+    <div class="d-flex justify-content-center aboutContainer">
+        <div class="align-self center">
+            <p class="aboutTitle"> About Our Mission</p>
+            <p class="aboutData">To automate and simplify the attendance system with online face recognition attendance system.</p>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-center aboutContainer">
+        <div class="align-self center">
+            <p class="aboutTitle">About Our Product</p>
+            <p class="aboutData">Traditionally, student’s attendances during lecture session are taken manually by using  attendance sheet given by the faculty in class, which is a time consuming event. <br>
+                The online face recognition attendance system helps the faculty in a great way. <br> 
+                In this project, the Open CV based face recognition approach has been proposed. <br> 
+                This model integrates a camera that captures an input image, an algorithm for detecting face and then marking the attendance.</p>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center aboutContainer" >
+        <div class="row" style="justify-content: space-evenly;">
+            <p class="aboutTitle">About Our Services</p>
+            <div class="col col-3">
+                <div class="align-self center">
+                    <p class="services">Face Detecttion Throughout the session.</p>
+                </div>
+            </div>
+        
+            <div class="col col-3 ">
+                <div class="align-self center">
+                    <p class="services">Automated attendance marking.</p>
+                </div>
+            </div>
+        
+            <div class="col col-3">
+                <div class="align-self center">
+                    <p class="services" >Attendance Record in Excel sheet.</p>
+                </div>
+            </div>
+        
+            <div class="col col-3 ">
+                <div class="align-self center">
+                    <p class="services">Online Face Recognition.</p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-center aboutContainer" >
+        <div class="row" style="justify-content: space-evenly;">
+            <p class="aboutTitle">Technology Used</p>
+            <div class="col col-3">
+                <div class="align-self center">
+                    <p class="services">Python 3</p>
+                </div>
+            </div>
+        
+            <div class="col col-3 ">
+                <div class="align-self center">
+                    <p class="services">Open CV</p>
+                </div>
+            </div>
+        
+            <div class="col col-3">
+                <div class="align-self center">
+                    <p class="services" >Dlib</p>
+                </div>
+            </div>
+        
+            <div class="col col-3 ">
+                <div class="align-self center">
+                    <p class="services">OS</p>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer sticky-bottom">
+      <div class="container">
+         <p class="center" style="padding: 0px; margin: 0px;color: rgba(255, 250, 240,0.4);"> &copy; onlineFaceRecognitionAttendanceSystem.com </p>
+         <p class="center" style="margin: 0px; padding: 0px;font-size: smaller;color: rgba(255, 250, 240,0.6);"> Developed by - Group No. 31</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
