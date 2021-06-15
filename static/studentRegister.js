@@ -40,6 +40,7 @@ function onSubmt() {
     }).then((res) => {
         const span = document.createElement("span")
         span.innerHTML = res.data.message
+        alert("Student registerd")
         document.body.append(span)
         console.log(res.data)
     })
